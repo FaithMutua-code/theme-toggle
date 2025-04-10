@@ -1,68 +1,160 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+  --background:#ffffff;
+  --text-primary:#000;
+  --text-secondary:#8e05c2;
+  --accent:#8e05c2;
+  --border:#333;
+  --form-bg:#fff;
+  --input-bg: #fff; /* white input for dark theme */
+  --input-text: #000;
+}
+[data-theme='dark'] {
+  --background: #121212;
+  --text-primary: #ffffff;
+  --text-secondary: #bb86fc;
+  --accent: #bb86fc;
+  --border: #444;
+  --form-bg: #1e1e1e;
+  --input-bg: #fff; /* white input for dark theme */
+  --input-text: #000;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+*{
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Arial, Helvetica, sans-serif, 'Roboto','Outfit';
+}
+a{
+  color: var(--text-secondary)
+}
+.app{
+  background-color: var(--background);
+  color: var(--text-primary);
+  height: 100vh;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.8rem;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.login h1{
+  text-align: center;
+  margin: -6rem 0 2rem;
+  font-size: 40px;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+h2{
+  text-align: center;
+  padding: 1rem;
+}
+.theme-toggle i{
+  font-size: 2rem;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
-  border-color: #646cff;
+.theme-toggle{
+  text-align: center;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  width: 300px;
+  margin: auto;
+  box-shadow: 0px 0px 12px var(--border);
+  background-color: var(--form-bg);
 }
+.top{
+  display: flex;
+ 
+  justify-content: space-between;
+  width: 100%;
+}
+.top i{
+  font-size: 1rem;
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+}
+.divider{
+  width:100% ;
+  text-align: center;
+  border-bottom: 1px solid var(--text-primary);
+  line-height: .1rem;
+  margin: 2rem 0;
   }
-  a:hover {
-    color: #747bff;
+  span{
+    padding: 0 10px;
+    background-color: var(--form-bg);
   }
-  button {
-    background-color: #f9f9f9;
+  form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
+  label{
+    margin: 8px 0;
+    font-weight: 600;
+  }
+  input{
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border: 1px solid  var(--border);
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+.remember{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+input[type=checkbox]:checked{
+  margin: 0;
+  padding: 0;
+
+}
+.remember p{
+  padding-left: 8px;
+
+}
+button{
+  background-color: var(--accent);
+  border: 1px solid var(--accent);
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.bottom{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: .8rem;
+}
+.create{
+  font-size: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+@media screen and (max-width:478px){
+  .login{
+    width: 95%;
+  }
+  
 }
