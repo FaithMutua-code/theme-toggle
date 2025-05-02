@@ -1,12 +1,36 @@
-# React + Vite
+# 🌗 React Login Page with Theme Toggle
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple and responsive **login page built with React**, featuring a **dark/light theme toggle** that persists using `localStorage`. switch between light and dark modes with a single click.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🌓 **Dark/Light Theme Toggle**  
+  Users can switch themes, and their preference is saved using `use-local-storage`.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 💾 **Persistent Theme**  
+  The selected theme remains even after refreshing or reopening the browser.
+
+
+
+---
+
+## 🛠️ Tech Stack
+
+- **React** – Frontend framework
+- **use-local-storage** – For persisting theme selection
+- **CSS** – Custom styling (`index.css`)
+- **Font Awesome** – Social icons and toggle icon
+
+---
+
+## 🚀 How to Run the Project
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/react-theme-login.git
+   cd react-theme-login
+   npm install
+   npm run dev
+
